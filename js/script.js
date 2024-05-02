@@ -12,7 +12,7 @@ function myButtonClicked() {
   const day = document.getElementById('option-1').checked
 
   // process
-  if (day == "Tuesday" || day == "Thursday"|| age > 12 && age < 21) {
+  if ((day == "Tuesday" || day == "Thursday") || (age > 12 && age < 21)) {
     document.getElementById('answer').innerHTML = "You get the student discount."
   } else {
     document.getElementById('answer').innerHTML = "You must pay regular price."
