@@ -7,14 +7,19 @@
 "use strict"
 
 function myButtonClicked() {
-  // input
-  const age = parseInt(document.getElementById('age-entered').value)
-  const day = document.getElementById('option-1').checked
+  // day of week variables
+  const tuesday = document.getElementById("option-tuesday").checked
+  const thursday = document.getElementById("option-thursday").checked
 
-  // process
-  if ((day == "Tuesday" || day == "Thursday") || (age > 12 && age < 21)) {
-    document.getElementById('answer').innerHTML = "You get the student discount."
+  // user age variable
+  const ageOfUser = parseInt(document.getElementById("age-of-user").value)
+
+  // add price of basic burger
+  if (((tuesday == true) || (thursday == true)) || ((ageOfUser > 12) && (ageOfUser < 21))) {
+    // output
+    document.getElementById("eligibility-for-user").innerHTML = "You are eligible for student pricing!"
   } else {
-    document.getElementById('answer').innerHTML = "You must pay regular price."
+    // output
+    document.getElementById("eligibility-for-user").innerHTML = "You must pay regular price."
   }
 }
