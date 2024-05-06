@@ -9,7 +9,7 @@
 function myButtonClicked() {
   // input
   const age = parseInt(document.getElementById('age-entered').value)
-  const day = document.getElementById('option-1').checked
+  const day = document.getElementById('option-monday').checked
 
   // process
   if ((day == "Tuesday" || day == "Thursday") || (age > 12 && age < 21)) {
